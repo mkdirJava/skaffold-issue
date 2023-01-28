@@ -1,0 +1,9 @@
+
+apiVersion: skaffold/v2beta11
+kind: Config
+metadata:
+  name: nginx
+deploy:
+  kubectl:
+    manifests:
+      - deployment.yaml

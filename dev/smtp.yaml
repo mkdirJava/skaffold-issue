@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: smtp
+  labels:
+    app: smtp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smtp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: smtp
+    spec:
+      containers:
+      - image: rnwood/smtp4dev:v3
+        name: smtp4dev
+        resources: {}
+status: {}
